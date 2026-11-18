@@ -57,7 +57,8 @@ window.location='index.php';</script>";
                     <tr> 
                         <td><?= $no++; ?></td> 
                         <td><?= $d['nama_barang']; ?></td> 
-                        <td><?= $d['harga'] ?></td>
+                        <td>Rp <?= number_format($d['harga'], 0, ',', '.') ?></td>
+
                         <td> 
                             <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#edit<?= $d['id_barang']; ?>" >Edit</button> 
                             <a href="index.php?hapus=<?= $d['id_barang']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Hapus barang ini?')">Hapus</a> 
